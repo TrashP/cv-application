@@ -16,16 +16,19 @@ class FinalCV extends Component {
 		return (
 			<div id="finalcv">
 				<div id="cvinfo">
-					<h1>{name}</h1>
-					<h3>{email}</h3>
-					<h3>{number}</h3>
-					<h3>{address}</h3>
+					<h1 className="title">{name}</h1>
+					<div className="block">
+						<h3>{email}</h3>
+						<h3>{number}</h3>
+						<h3>{address}</h3>
+					</div>
 				</div>
 				<div id="cvedu">
+					<h1 className="title">Education</h1>
 					{eduExp.map((education, i) => {
 						return (
-							<div key={i}>
-								<h1 key={i}>{education.school}</h1>
+							<div key={i} className="block">
+								<h2 key={i}>{education.school}</h2>
 								<h3 key={i + 1}>{education.degree}</h3>
 								<h3 key={i + 2}>{education.period}</h3>
 								<button
@@ -42,10 +45,11 @@ class FinalCV extends Component {
 					})}
 				</div>
 				<div id="cvwork">
+					<h1 className="title">Work Experience</h1>
 					{workExp.map((work, i) => {
 						return (
-							<div key={i}>
-								<h1 key={i + 1}>{work.company}</h1>
+							<div key={i} className="block">
+								<h2 key={i + 1}>{work.company}</h2>
 								<h3 key={i + 2}>{work.position}</h3>
 								<h3 key={i + 3}>{work.tasks}</h3>
 								<h3 key={i + 4}>{work.duration}</h3>

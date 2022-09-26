@@ -187,7 +187,7 @@ class App extends Component {
 
 	render() {
 		return (
-			<div>
+			<div id="container">
 				<Info changeInfo={this.changeInfo} />
 				<h1>EDUCATION</h1>
 				<button
